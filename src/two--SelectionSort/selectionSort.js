@@ -25,7 +25,9 @@ class Sort {
       for (let j = i + 1; j < N; j++) {
         minValueIndex = arr[j] < arr[minValueIndex] ? j : minValueIndex;
       }
-      this.swap(arr, i, minValueIndex);
+      if (i !== minValueIndex) {
+        this.swap(arr, i, minValueIndex);
+      }
     }
   }
   static swap(arr, i, j) {
